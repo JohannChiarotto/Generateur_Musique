@@ -15,21 +15,19 @@ int main()
         cout << "1. Guitare" << endl << "2. Piano" << endl << "3. Harpe" << endl;
         int instrument;
         cin >> instrument;
+        system("cls");
 
         if (instrument == 1) //Guitare
         {
-            system("cls");
             cout << "Vous avez choisi la guitare." << endl;
         }
         else if (instrument == 2) //Piano
         {
-            system("cls");
-            cout << "Vous avez choisi la guitare." << endl;
+            cout << "Vous avez choisi le piano." << endl;
         }
         else if (instrument == 3) //Harpe
         {
-            system("cls");
-            cout << "Vous avez choisi la guitare." << endl;
+            cout << "Vous avez choisi la harpe." << endl;
         }
         else { //Erreur
             cout << "Il y a une erreur dans le choix de l'intruement" << endl;
