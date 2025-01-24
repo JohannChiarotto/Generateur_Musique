@@ -7,9 +7,8 @@ Guitare::Guitare()
 {
 }
 
-Guitare::Guitare(int f) : Instrument()
+Guitare::Guitare(string n, string v) : Instrument(n,v)
 {
-	m_frequence = f;
 }
 
 void Guitare::Joue()

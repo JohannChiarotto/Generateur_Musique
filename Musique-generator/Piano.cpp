@@ -8,9 +8,8 @@ Piano::Piano()
 {
 }
 
-Piano::Piano(int f) : Instrument()
+Piano::Piano(string n, string v) : Instrument(n,v)
 {
-	m_frequence = f;
 }
 
 void Piano::Joue()

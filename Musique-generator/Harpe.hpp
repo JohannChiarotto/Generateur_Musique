@@ -11,7 +11,7 @@ private:
     int m_frequence;
 public:
     Harpe();
-    Harpe(int f);
+    Harpe(string n, string v);
     void Joue();
 };
 

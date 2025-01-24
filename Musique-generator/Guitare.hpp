@@ -12,7 +12,7 @@ private:
 
 public:
 	Guitare();
-	Guitare(int f);
+	Guitare(string n, string v);
 	void Joue();
 };
 #endif

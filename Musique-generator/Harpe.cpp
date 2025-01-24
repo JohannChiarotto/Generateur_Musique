@@ -8,9 +8,8 @@ Harpe::Harpe()
 {
 }
 
-Harpe::Harpe(int f) : Instrument()
+Harpe::Harpe(string n, string v) : Instrument(n, v)
 {
-	m_frequence = f;
 }
 
 void Harpe::Joue()

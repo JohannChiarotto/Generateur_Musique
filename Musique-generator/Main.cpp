@@ -27,7 +27,7 @@ int main()
         if (instrument == 1) //Guitare
         {
             cout << "Vous avez choisi la guitare." << endl;
-            Instrument_definie = make_shared<Guitare>();
+            Instrument_definie = make_shared<Guitare>("Guitare","rapide");
 
         }
         else if (instrument == 2) //Piano
