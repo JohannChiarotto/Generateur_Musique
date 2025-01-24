@@ -14,6 +14,8 @@ public:
 	Instrument();
 	Instrument(string n, string v);
 	~Instrument();
+
+	void Joue();
 };
 
 #endif
