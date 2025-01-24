@@ -38,7 +38,7 @@ int main()
             cout << "Vous avez choisi la harpe." << endl;
         }
         else { //Erreur
-            cout << "Il y a une erreur dans le choix de l'intruement" << endl;
+            cout << "Il y a une erreur dans le choix de l'instrument" << endl;
         }
 
 
