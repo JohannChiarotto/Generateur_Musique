@@ -1,5 +1,9 @@
 #include "Piano.hpp"
+#include <iostream>
 
-Piano::Piano()
+using namespace std;
+
+Piano::Piano(int f)
 {
+	m_frequence = f;
 }
