@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Piano::Piano(int f)
+Piano::Piano(int f) : Instrument()
 {
 	m_frequence = f;
 }
