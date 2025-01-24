@@ -28,6 +28,25 @@ int main()
         {
             cout << "Vous avez choisi la guitare." << endl;
 
+
+            // Définir la touche que l'on veut assigner
+            const int touche = 0x41; // Touche A
+
+            while (true) {
+                // Vérifier l'état de la touche
+                short etat = GetAsyncKeyState(touche);
+
+                // Si la touche est enfoncée
+                if (etat < 0) {
+                    // Exécuter l'action
+                    printf("Touche 1 enfoncée !\n");
+                }
+
+                // Attendre un peu pour ne pas consommer trop de ressources
+                Sleep(10);
+            }
+
+
         }
         else if (instrument == 2) //Piano
         {
