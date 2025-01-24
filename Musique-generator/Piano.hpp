@@ -11,7 +11,7 @@ class Piano : public Instrument
 private:
 	int m_frequence;
 public:
-	Piano();
+	Piano(int f);
 
 };
 #endif
