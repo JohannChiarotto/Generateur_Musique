@@ -9,13 +9,14 @@ class Instrument
 protected:
 	string m_nom;
 	string m_vitessse;
+	int m_frequence;
 
 public:
 	Instrument();
 	Instrument(string n, string v);
-	~Instrument();
+	virtual ~Instrument();
 
-	void Joue();
+	virtual void Joue();
 };
 
 #endif

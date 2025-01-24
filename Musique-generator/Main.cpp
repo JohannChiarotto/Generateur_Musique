@@ -27,21 +27,30 @@ int main()
         if (instrument == 1) //Guitare
         {
             cout << "Vous avez choisi la guitare." << endl;
+
+            Instrument_definie = make_shared<Guitare>();
+            //guitare->Joue();
+
         }
         else if (instrument == 2) //Piano
         {
             cout << "Vous avez choisi le piano." << endl;
+
+            Instrument_definie = make_shared<Piano>();
+            //piano->Joue();
         }
         else if (instrument == 3) //Harpe
         {
             cout << "Vous avez choisi la harpe." << endl;
+
+            Instrument_definie = make_shared<Harpe>();
+            //harpe->Joue();
         }
         else { //Erreur
             cout << "Il y a une erreur dans le choix de l'instrument" << endl;
         }
 
-        shared_ptr<Instrument> test = make_shared<Instrument>();
-        test->Joue();
+        Instrument_definie->Joue();
 
 
     }

@@ -10,7 +10,9 @@ class Harpe : public Instrument {
 private:
     int m_frequence;
 public:
+    Harpe();
     Harpe(int f);
+    void Joue();
 };
 
 #endif
