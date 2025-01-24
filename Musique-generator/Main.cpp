@@ -1,4 +1,8 @@
 #include <iostream>
+#include "Instrument.hpp"
+#include "Piano.hpp"
+#include "Guitare.hpp"
+#include "Harpe.hpp"
 #include <windows.h>
 
 using namespace std;
@@ -18,9 +22,12 @@ int main()
         cin >> instrument;
         system("cls");
 
+        shared_ptr<Instrument> Instrument_definie;
+
         if (instrument == 1) //Guitare
         {
             cout << "Vous avez choisi la guitare." << endl;
+
         }
         else if (instrument == 2) //Piano
         {
