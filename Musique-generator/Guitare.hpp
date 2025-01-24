@@ -11,6 +11,6 @@ private:
 	int m_frequence;
 
 public:
-	Guitare();
+	Guitare(int f);
 };
 #endif
