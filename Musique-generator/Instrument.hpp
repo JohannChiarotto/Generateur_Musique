@@ -11,8 +11,8 @@ protected:
 	string m_vitessse;
 
 public:
-	Instrument();
-
+	Instrument(string n, string v);
+	~Instrument();
 };
 
 #endif
