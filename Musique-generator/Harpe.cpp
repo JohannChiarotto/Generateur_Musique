@@ -1,6 +1,10 @@
 #include "Harpe.hpp"
 
-Harpe::Harpe()
-{
+#include<iostream>
 
+using namespace std;
+
+Harpe::Harpe(int f)
+{
+	m_frequence = f;
 }

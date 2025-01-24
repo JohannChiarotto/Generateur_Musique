@@ -10,8 +10,7 @@ class Harpe : public Instrument {
 private:
     int m_frequence;
 public:
-    Harpe();
-    //void playNote(const std::string& note, const std::string& rhythm) const override;
+    Harpe(int f);
 };
 
 #endif
