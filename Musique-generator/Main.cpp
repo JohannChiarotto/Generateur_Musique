@@ -28,7 +28,7 @@ int main()
         {
             cout << "Vous avez choisi la guitare." << endl;
 
-            Instrument_definie = make_shared<Guitare>();
+            Instrument_definie = make_shared<Guitare>("Guitare","rapide");
             //guitare->Joue();
 
         }
@@ -36,14 +36,14 @@ int main()
         {
             cout << "Vous avez choisi le piano." << endl;
 
-            Instrument_definie = make_shared<Piano>();
+            Instrument_definie = make_shared<Piano>("Piano", "rapide");
             //piano->Joue();
         }
         else if (instrument == 3) //Harpe
         {
             cout << "Vous avez choisi la harpe." << endl;
 
-            Instrument_definie = make_shared<Harpe>();
+            Instrument_definie = make_shared<Harpe>("Harpe", "rapide");
             //harpe->Joue();
         }
         else { //Erreur
