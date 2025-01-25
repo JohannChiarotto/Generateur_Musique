@@ -9,6 +9,7 @@ using namespace std;
 
 void Joue(shared_ptr<Instrument> instrument)
 {
+    cout << "Vous avez choisit l'instrument suivant : " << instrument->get_nom() << endl;
     // Définir la touche que l'on veut assigner
     const int Do = 0x41; // Touche A
     const int Re = 0x5A; // Touche Z
@@ -89,21 +90,15 @@ int main()
 
         if (instrument == 1) //Guitare
         {
-            cout << "Vous avez choisi la guitare." << endl;
             Instrument_definie = make_shared<Guitare>("Guitare","rapide");
-
         }
         else if (instrument == 2) //Piano
         {
-            cout << "Vous avez choisi le piano." << endl;
-
-            Instrument_definie = make_shared<Piano>();
+            Instrument_definie = make_shared<Piano>("Piano","rapide");
         }
         else if (instrument == 3) //Harpe
         {
-            cout << "Vous avez choisi la harpe." << endl;
-
-            Instrument_definie = make_shared<Harpe>();
+            Instrument_definie = make_shared<Harpe>("Harpe","rapide");
         }
         else { //Erreur
             cout << "Il y a une erreur dans le choix de l'instrument" << endl;

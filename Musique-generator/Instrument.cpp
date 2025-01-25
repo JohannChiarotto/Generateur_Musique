@@ -20,3 +20,8 @@ Instrument::~Instrument()
 void Instrument::Joue(string note)
 {
 }
+
+string Instrument::get_nom()
+{
+	return m_nom;
+}

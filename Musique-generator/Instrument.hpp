@@ -17,6 +17,8 @@ public:
 	virtual ~Instrument();
 
 	virtual void Joue(string note);
+
+	string get_nom();
 };
 
 #endif
