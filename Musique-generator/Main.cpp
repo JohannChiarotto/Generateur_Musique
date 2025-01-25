@@ -7,6 +7,69 @@
 
 using namespace std;
 
+void Joue(shared_ptr<Instrument> instrument)
+{
+    // Définir la touche que l'on veut assigner
+    const int Do = 0x41; // Touche A
+    const int Re = 0x5A; // Touche Z
+    const int Mi = 0x45; // Touche E
+    const int Fa = 0x52; // Touche R
+    const int Sol = 0x54; // Touche T
+    const int La = 0x59; // Touche Y
+    const int Si = 0x55; // Touche U
+    const int Stop = 0x1B; // Touche Échap
+
+    bool running = true;
+    while (running) {
+        // Vérifier l'état de la touche
+        short etat_Do = GetAsyncKeyState(Do);
+        short etat_Re = GetAsyncKeyState(Re);
+        short etat_Mi = GetAsyncKeyState(Mi);
+        short etat_Fa = GetAsyncKeyState(Fa);
+        short etat_Sol = GetAsyncKeyState(Sol);
+        short etat_La = GetAsyncKeyState(La);
+        short etat_Si = GetAsyncKeyState(Si);
+        short etat_Stop = GetAsyncKeyState(Stop);
+
+        // Si la touche est enfoncée
+        if (etat_Do < 0) {
+            instrument->Joue("Do");
+        }
+
+        if (etat_Re < 0) {
+            instrument->Joue("Re");;
+        }
+
+        if (etat_Mi < 0) {
+            instrument->Joue("Mi");
+        }
+
+        if (etat_Fa < 0) {
+            instrument->Joue("Fa");
+        }
+
+        if (etat_Sol < 0) {
+            instrument->Joue("Sol");
+        }
+
+        if (etat_La < 0) {
+            instrument->Joue("La");
+        }
+
+        if (etat_Si < 0) {
+            instrument->Joue("Si");
+        }
+
+        if (etat_Stop < 0) {
+            printf("Merci d'avoir jouer de la harpe.");
+            running = false;
+        }
+
+        // Attendre un peu pour ne pas consommer trop de ressources
+        Sleep(10);
+    }
+}
+
 int main()
 {
     cout << "Bonjour et bienvenue sur notre simulateur interactif de musique." << endl;
@@ -46,7 +109,7 @@ int main()
             cout << "Il y a une erreur dans le choix de l'instrument" << endl;
         }
 
-        Instrument_definie->Joue();
+        Joue(Instrument_definie);
 
 
     }

@@ -12,80 +12,33 @@ Harpe::Harpe(string n, string v) : Instrument(n, v)
 {
 }
 
-void Harpe::Joue()
+void Harpe::Joue(string note)
 {
-    // Définir la touche que l'on veut assigner
-    const int Do = 0x41; // Touche A
-    const int Re = 0x5A; // Touche Z
-    const int Mi = 0x45; // Touche E
-    const int Fa = 0x52; // Touche R
-    const int Sol = 0x54; // Touche T
-    const int La = 0x59; // Touche Y
-    const int Si = 0x55; // Touche U
-    const int Stop = 0x1B; // Touche Échap
+    if (note == "Do") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-    bool running = true;
-    while (running) {
-        // Vérifier l'état de la touche
-        short etat_Do = GetAsyncKeyState(Do);
-        short etat_Re = GetAsyncKeyState(Re);
-        short etat_Mi = GetAsyncKeyState(Mi);
-        short etat_Fa = GetAsyncKeyState(Fa);
-        short etat_Sol = GetAsyncKeyState(Sol);
-        short etat_La = GetAsyncKeyState(La);
-        short etat_Si = GetAsyncKeyState(Si);
-        short etat_Stop = GetAsyncKeyState(Stop);
+    if (note == "Re") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-        // Si la touche est enfoncée
-        if (etat_Do < 0) {
-            // Exéc!uter l'action
-            printf("Do  -->  Harpe\n");
-        }
+    if (note == "Mi") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-        // Si la touche est enfoncée
-        if (etat_Re < 0) {
-            // Exécuter l'action
-            printf("Re  -->  Harpe\n");
-        }
+    if (note == "fa") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-        // Si la touche est enfoncée
-        if (etat_Mi < 0) {
-            // Exécuter l'action
-            printf("Mi  -->  Harpe\n");
-        }
+    if (note == "Sol") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-        // Si la touche est enfoncée
-        if (etat_Fa < 0) {
-            // Exécuter l'action
-            printf("Fa  -->  Harpe\n");
-        }
+    if (note == "La") {
+        cout << note << "  -->  Harpe" << endl;
+    }
 
-        // Si la touche est enfoncée
-        if (etat_Sol < 0) {
-            // Exécuter l'action
-            printf("Sol  -->  Harpe\n");
-        }
-
-        // Si la touche est enfoncée
-        if (etat_La < 0) {
-            // Exécuter l'action
-            printf("La  -->  Harpe\n");
-        }
-
-        // Si la touche est enfoncée
-        if (etat_Si < 0) {
-            // Exécuter l'action
-            printf("Si  -->  Harpe\n");
-        }
-
-        // Si la touche est enfoncée
-        if (etat_Stop < 0) {
-            // Exécuter l'action
-            printf("Merci d'avoir jouer de la harpe.");
-            running = false;
-        }
-
-        // Attendre un peu pour ne pas consommer trop de ressources
-        Sleep(10);
+    if (note == "Si") {
+        cout << note << "  -->  Harpe" << endl;
     }
 }

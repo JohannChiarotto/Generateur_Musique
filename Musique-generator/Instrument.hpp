@@ -16,7 +16,7 @@ public:
 	Instrument(string n, string v);
 	virtual ~Instrument();
 
-	virtual void Joue();
+	virtual void Joue(string note);
 };
 
 #endif

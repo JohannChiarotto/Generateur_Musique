@@ -12,7 +12,7 @@ private:
 public:
     Harpe();
     Harpe(string n, string v);
-    void Joue();
+    void Joue(string n);
 };
 
 #endif
