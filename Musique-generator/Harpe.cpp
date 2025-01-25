@@ -26,7 +26,7 @@ void Harpe::Joue(string note)
         cout << note << "  -->  Harpe" << endl;
     }
 
-    if (note == "fa") {
+    if (note == "Fa") {
         cout << note << "  -->  Harpe" << endl;
     }
 

@@ -25,7 +25,7 @@ void Guitare::Joue(string note)
         cout << note << "  -->  Guitare" << endl;
     }
 
-    if (note == "fa") {
+    if (note == "Fa") {
         cout << note << "  -->  Guitare" << endl;
     }
 

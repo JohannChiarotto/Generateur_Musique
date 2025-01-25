@@ -62,75 +62,103 @@ void Joue(shared_ptr<Instrument> instrument)
         }
 
         if (etat_Stop < 0) {
-            printf("Merci d'avoir jouer de la harpe.");
+            cout << "Merci d'avoir jouer." << endl;
             running = false;
         }
 
-        // Attendre un peu pour ne pas consommer trop de ressources
         Sleep(10);
     }
 }
 
 int main()
 {
-    cout << "Bonjour et bienvenue sur notre simulateur interactif de musique." << endl;
-    cout << "Vous avez le choix entre :" << endl << "1. Jouer de la musique" << endl << "2. Jouer une partition deja enregistree" << endl;
-    int choix1;
-    cin >> choix1;
+    bool running = true;
 
-    if (choix1 == 1) //Jouer un instrument
+    while (running)
     {
-        cout << endl << "Vous pouvez jouez un instrument parmis les suivants :" << endl;
-        cout << "1. Guitare" << endl << "2. Piano" << endl << "3. Harpe" << endl;
-        int instrument;
-        cin >> instrument;
-        system("cls");
+        cout << "Bonjour et bienvenue sur notre simulateur interactif de musique." << endl;
+        cout << "Vous avez le choix entre :" << endl << "1. Jouer de la musique" << endl << "2. Jouer une partition deja enregistree" << endl;
+        int choix1;
+        cin >> choix1;
 
-        shared_ptr<Instrument> Instrument_definie;
-
-        if (instrument == 1) //Guitare
+        if (choix1 == 1) //Jouer un instrument
         {
-            Instrument_definie = make_shared<Guitare>("Guitare","rapide");
+            bool ok = false;
+            shared_ptr<Instrument> Instrument_definie;
+
+            while (ok == false)
+            {
+                cout << endl << "Vous pouvez jouez un instrument parmis les suivants :" << endl;
+                cout << "1. Guitare" << endl << "2. Piano" << endl << "3. Harpe" << endl;
+                int instrument;
+                cin >> instrument;
+
+                system("cls");
+
+                if (instrument == 1) //Guitare
+                {
+                    Instrument_definie = make_shared<Guitare>("Guitare", "rapide");
+                }
+                else if (instrument == 2) //Piano
+                {
+                    Instrument_definie = make_shared<Piano>("Piano", "rapide");
+                }
+                else if (instrument == 3) //Harpe
+                {
+                    Instrument_definie = make_shared<Harpe>("Harpe", "rapide");
+                }
+                else { //Erreur
+                    cout << "Il y a une erreur dans le choix de l'instrument" << endl << endl;
+                    continue;
+                }
+                ok = true;
+            }
+
+            Joue(Instrument_definie);
+
+
         }
-        else if (instrument == 2) //Piano
+        else if (choix1 == 2) //Jouer une partition
         {
-            Instrument_definie = make_shared<Piano>("Piano","rapide");
+            cout << "Nous pouvons vous jouer les morceaux suivants :" << endl << "1. Mario" << endl << "2. Star Wars" << endl;
+            int fichier;
+            cin >> fichier;
+
+            system("cls");
+
+            if (fichier == 1)
+            {
+                cout << "Voici le morceau de Mario" << endl;
+            }
+            else if (fichier == 2)
+            {
+                cout << "Voici le morceau de Star Wars" << endl;
+            }
+            else
+            {
+                cout << "Erreur lors du choix de la chanson" << endl;
+            }
         }
-        else if (instrument == 3) //Harpe
+        else //Erreur
         {
-            Instrument_definie = make_shared<Harpe>("Harpe","rapide");
-        }
-        else { //Erreur
-            cout << "Il y a une erreur dans le choix de l'instrument" << endl;
+            cout << "Erreur lors de la selection !" << endl;
         }
 
-        Joue(Instrument_definie);
+        cout << "Voulez-vous continuer a utiliser notre generateur de musique intercatif ? O/N" << endl;
+        char replay;
+        cin >> replay;
 
-
-    }
-    else if (choix1 == 2) //Jouer une partition
-    {
-        cout << "Nous pouvons vous jouer les morceaux suivants :" << endl << "1. Mario" << endl << "2. Star Wars" << endl;
-        int fichier;
-        cin >> fichier;
-
-        system("cls");
-
-        if (fichier == 1)
+        if (replay == 'N')
         {
-            cout << "Voici le morceau de Mario" << endl;
+            running = false;
         }
-        else if (fichier == 2)
+        else if (replay == 'O')
         {
-            cout << "Voici le morceau de Star Wars" << endl;
+            continue;
         }
-        else
-        {
-            cout << "Erreur lors du choix de la chanson" << endl;
+        else {
+            cout << "Erreur lors du choix. Arret du generateur de musique." << endl << "A bientot." << endl << endl;
+            running = false;
         }
-    }
-    else //Erreur
-    {
-        cout << "Erreur lors de la selection !" << endl;
     }
 }

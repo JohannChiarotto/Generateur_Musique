@@ -26,7 +26,7 @@ void Piano::Joue(string note)
         cout << note << "  -->  Piano" << endl;
     }
 
-    if (note == "fa") {
+    if (note == "Fa") {
         cout << note << "  -->  Piano" << endl;
     }
 
