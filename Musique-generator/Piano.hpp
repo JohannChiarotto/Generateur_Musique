@@ -12,7 +12,7 @@ private:
 	int m_frequence;
 public:
 	Piano();
-	Piano(string n, string v);
+	Piano(string n, int v);
 	void Joue(string n);
 };
 #endif

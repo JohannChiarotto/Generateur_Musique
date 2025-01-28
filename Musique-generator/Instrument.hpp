@@ -8,17 +8,17 @@ class Instrument
 { 
 protected:
 	string m_nom;
-	string m_vitessse;
-	int m_frequence;
+	int m_vitesse;
 
 public:
 	Instrument();
-	Instrument(string n, string v);
+	Instrument(string n, int v);
 	virtual ~Instrument();
 
 	virtual void Joue(string note);
 
 	string get_nom();
+	int get_vitesse();
 };
 
 #endif

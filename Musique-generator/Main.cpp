@@ -87,6 +87,12 @@ int main()
             int vitesse;
             cin >> vitesse;
 
+            if (vitesse < 1 || vitesse > 3)
+            {
+                cout << "erreur lors du choix de la vitesse." << endl;
+                continue;
+            }
+
             bool ok = false;
             shared_ptr<Instrument> Instrument_definie;
 
@@ -101,15 +107,15 @@ int main()
 
                 if (instrument == 1) //Guitare
                 {
-                    Instrument_definie = make_shared<Guitare>("Guitare", 200);
+                    Instrument_definie = make_shared<Guitare>("Guitare", vitesse*150);
                 }
                 else if (instrument == 2) //Piano
                 {
-                    Instrument_definie = make_shared<Piano>("Piano", 200);
+                    Instrument_definie = make_shared<Piano>("Piano", vitesse*150);
                 }
                 else if (instrument == 3) //Harpe
                 {
-                    Instrument_definie = make_shared<Harpe>("Harpe", 200);
+                    Instrument_definie = make_shared<Harpe>("Harpe", vitesse*150);
                 }
                 else { //Erreur
                     cout << "Il y a une erreur dans le choix de l'instrument" << endl << endl;

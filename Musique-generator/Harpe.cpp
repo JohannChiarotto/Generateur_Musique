@@ -8,7 +8,7 @@ Harpe::Harpe()
 {
 }
 
-Harpe::Harpe(string n, string v) : Instrument(n, v)
+Harpe::Harpe(string n, int v) : Instrument(n, v)
 {
 }
 
@@ -16,36 +16,36 @@ void Harpe::Joue(string note)
 {
     if (note == "Do") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2000, 250);
+        Beep(2000, get_vitesse());
     }
 
     if (note == "Re") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2020, 250);
+        Beep(2020, get_vitesse());
     }
 
     if (note == "Mi") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2040, 250);
+        Beep(2040, get_vitesse());
     }
 
     if (note == "Fa") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2060, 250);
+        Beep(2060, get_vitesse());
     }
 
     if (note == "Sol") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2080, 250);
+        Beep(2080, get_vitesse());
     }
 
     if (note == "La") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2100, 250);
+        Beep(2100, get_vitesse());
     }
 
     if (note == "Si") {
         cout << note << "  -->  Harpe" << endl;
-        Beep(2120, 250);
+        Beep(2120, get_vitesse());
     }
 }
