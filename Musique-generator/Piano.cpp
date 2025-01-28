@@ -42,3 +42,7 @@ void Piano::Joue(string note, int vitesse)
         Beep(3240, vitesse);
     }
 }
+
+void Piano::AfficheArt()
+{
+}

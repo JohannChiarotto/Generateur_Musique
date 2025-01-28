@@ -14,5 +14,6 @@ public:
 	Guitare();
 	Guitare(string n, int v);
 	void Joue(string n, int vitesse);
+	void AfficheArt();
 };
 #endif

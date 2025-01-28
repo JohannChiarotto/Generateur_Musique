@@ -41,3 +41,8 @@ void Guitare::Joue(string note, int vitesse)
         Beep(1240, vitesse);
     }
 }
+
+void Guitare::AfficheArt()
+{
+    cout << "Art Guitare" << endl;
+}

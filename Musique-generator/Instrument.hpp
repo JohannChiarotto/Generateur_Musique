@@ -16,6 +16,7 @@ public:
 	virtual ~Instrument();
 
 	virtual void Joue(string note, int vitesse);
+	virtual void AfficheArt();
 
 	string get_nom();
 	int get_vitesse();

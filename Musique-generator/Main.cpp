@@ -14,7 +14,10 @@ void Joue(shared_ptr<Instrument> instrument, int vitesse)
 {
     bool running = true;
 
-    cout << "Vous avez choisit l'instrument suivant : " << instrument->get_nom() << endl;
+    cout << "Vous avez choisit l'instrument suivant : " << instrument->get_nom() << endl << endl;
+
+    instrument->AfficheArt();
+
     
     while (running)
     {
@@ -106,7 +109,7 @@ int main()
                 }
                 ok = true;
             }
-
+     
             Joue(Instrument_definie, (4-vitesse) * 200);
 
 
@@ -158,5 +161,3 @@ int main()
         }
     }
 }
-
-//test

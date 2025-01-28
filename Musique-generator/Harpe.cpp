@@ -42,3 +42,8 @@ void Harpe::Joue(string note, int vitesse)
         Beep(2240, vitesse);
     }
 }
+
+void Harpe::AfficheArt()
+{
+    cout << "Art Harpe" << endl;
+}

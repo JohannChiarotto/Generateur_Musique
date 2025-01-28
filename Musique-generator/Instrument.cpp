@@ -21,6 +21,10 @@ void Instrument::Joue(string note, int vitesse)
 {
 }
 
+void Instrument::AfficheArt()
+{
+}
+
 string Instrument::get_nom()
 {
 	return m_nom;
