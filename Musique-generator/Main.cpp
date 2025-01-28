@@ -83,6 +83,10 @@ int main()
 
         if (choix1 == 1) //Jouer un instrument
         {
+            cout << "A quelle vitesse voulez-vous jouer de la musique ?" << endl << "1. Lentemement " << endl << "2. Normale" << endl << "3. Rapide" << endl;
+            int vitesse;
+            cin >> vitesse;
+
             bool ok = false;
             shared_ptr<Instrument> Instrument_definie;
 
