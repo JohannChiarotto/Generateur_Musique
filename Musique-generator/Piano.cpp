@@ -12,33 +12,33 @@ Piano::Piano(string n, int v) : Instrument(n,v)
 {
 }
 
-void Piano::Joue(string note)
+void Piano::Joue(string note, int vitesse)
 {
     if (note == "Do") {
-        Beep(3000, get_vitesse());
+        Beep(3000, vitesse);
     }
 
     if (note == "Re") {
-        Beep(3020, get_vitesse());
+        Beep(3040, vitesse);
     }
 
     if (note == "Mi") {
-        Beep(3040, get_vitesse());
+        Beep(3080, vitesse);
     }
 
     if (note == "Fa") {
-        Beep(3060, get_vitesse());
+        Beep(3120, vitesse);
     }
 
     if (note == "Sol") {
-        Beep(3080, get_vitesse());
+        Beep(3160, vitesse);
     }
 
     if (note == "La") {
-        Beep(3100, get_vitesse());
+        Beep(3200, vitesse);
     }
 
     if (note == "Si") {
-        Beep(3120, get_vitesse());
+        Beep(3240, vitesse);
     }
 }

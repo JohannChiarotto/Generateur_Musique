@@ -13,6 +13,6 @@ private:
 public:
 	Piano();
 	Piano(string n, int v);
-	void Joue(string n);
+	void Joue(string n, int vitesse);
 };
 #endif

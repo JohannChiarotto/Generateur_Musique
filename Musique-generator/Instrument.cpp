@@ -17,7 +17,7 @@ Instrument::~Instrument()
 {
 }
 
-void Instrument::Joue(string note)
+void Instrument::Joue(string note, int vitesse)
 {
 }
 

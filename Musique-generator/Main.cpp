@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void Joue(shared_ptr<Instrument> instrument)
+void Joue(shared_ptr<Instrument> instrument, int vitesse)
 {
     bool running = true;
 
@@ -24,25 +24,25 @@ void Joue(shared_ptr<Instrument> instrument)
             // Fait la détection des touches
             switch (touche) {
             case 'a':
-                instrument->Joue("Do");
+                instrument->Joue("Do",vitesse);
                 break;
             case 'z': 
-                instrument->Joue("Re");
+                instrument->Joue("Re", vitesse);
                 break;
             case 'e': 
-                instrument->Joue("Mi");
+                instrument->Joue("Mi", vitesse);
                 break;
             case 'r':
-                instrument->Joue("Fa");
+                instrument->Joue("Fa", vitesse);
                 break;
             case 't':
-                instrument->Joue("Sol");
+                instrument->Joue("Sol", vitesse);
                 break;
             case 'y': 
-                instrument->Joue("La");
+                instrument->Joue("La", vitesse);
                 break;
             case 'u': 
-                instrument->Joue("Si");
+                instrument->Joue("Si", vitesse);
                 break;
             case 'q':
                 running = false;
@@ -107,7 +107,7 @@ int main()
                 ok = true;
             }
 
-            Joue(Instrument_definie);
+            Joue(Instrument_definie, (4-vitesse) * 200);
 
 
         }
@@ -144,6 +144,7 @@ int main()
         if (replay == 'N')
         {
             running = false;
+            cout << endl << "A bientot" << endl;
         }
         else if (replay == 'O')
         {
