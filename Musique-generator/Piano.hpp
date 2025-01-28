@@ -8,11 +8,9 @@ using namespace std;
 
 class Piano : public Instrument
 {
-private:
-	int m_frequence;
 public:
 	Piano();
-	Piano(string n, int v);
+	Piano(string n);
 	void Joue(string n, int vitesse);
 	void AfficheArt();
 };

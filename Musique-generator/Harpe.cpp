@@ -8,7 +8,7 @@ Harpe::Harpe()
 {
 }
 
-Harpe::Harpe(string n, int v) : Instrument(n, v)
+Harpe::Harpe(string n) : Instrument(n)
 {
 }
 

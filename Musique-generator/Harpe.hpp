@@ -7,11 +7,9 @@
 using namespace std;
 
 class Harpe : public Instrument {
-private:
-    int m_frequence;
 public:
     Harpe();
-    Harpe(string n, int v);
+    Harpe(string n);
     void Joue(string n, int vitesse);
     void AfficheArt();
 };

@@ -8,7 +8,7 @@ Piano::Piano()
 {
 }
 
-Piano::Piano(string n, int v) : Instrument(n,v)
+Piano::Piano(string n) : Instrument(n)
 {
 }
 

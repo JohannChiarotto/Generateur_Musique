@@ -7,10 +7,9 @@ Instrument::Instrument()
 {
 }
 
-Instrument::Instrument(string n, int v)
+Instrument::Instrument(string n)
 {
 	m_nom = n;
-	m_vitesse = v;
 }
 
 Instrument::~Instrument()
@@ -28,9 +27,4 @@ void Instrument::AfficheArt()
 string Instrument::get_nom()
 {
 	return m_nom;
-}
-
-int Instrument::get_vitesse()
-{
-	return m_vitesse;
 }

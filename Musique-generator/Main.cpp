@@ -6,9 +6,7 @@
 #include <windows.h>
 #include <conio.h>
 
-
 using namespace std;
-
 
 void Joue(shared_ptr<Instrument> instrument, int vitesse)
 {
@@ -93,15 +91,15 @@ int main()
 
                 if (instrument == 1) //Guitare
                 {
-                    Instrument_definie = make_shared<Guitare>("Guitare", vitesse*150);
+                    Instrument_definie = make_shared<Guitare>("Guitare");
                 }
                 else if (instrument == 2) //Piano
                 {
-                    Instrument_definie = make_shared<Piano>("Piano", vitesse*150);
+                    Instrument_definie = make_shared<Piano>("Piano");
                 }
                 else if (instrument == 3) //Harpe
                 {
-                    Instrument_definie = make_shared<Harpe>("Harpe", vitesse*150);
+                    Instrument_definie = make_shared<Harpe>("Harpe");
                 }
                 else { //Erreur
                     cout << "Il y a une erreur dans le choix de l'instrument" << endl << endl;
@@ -111,7 +109,6 @@ int main()
             }
      
             Joue(Instrument_definie, (4-vitesse) * 200);
-
 
         }
         else if (choix1 == 2) //Jouer une partition
@@ -155,9 +152,9 @@ int main()
             continue;
         }
         else {
+            system("cls");
             cout << "Erreur lors du choix. Arret du generateur de musique." << endl << "A bientot." << endl << endl;
             running = false;
-            system("cls");
         }
     }
 }

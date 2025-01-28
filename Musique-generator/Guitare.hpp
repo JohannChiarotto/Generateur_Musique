@@ -7,12 +7,9 @@ using namespace std;
 
 class Guitare :public Instrument
 {
-private:
-	int m_frequence;
-
 public:
 	Guitare();
-	Guitare(string n, int v);
+	Guitare(string n);
 	void Joue(string n, int vitesse);
 	void AfficheArt();
 };

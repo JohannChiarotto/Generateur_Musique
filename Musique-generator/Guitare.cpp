@@ -7,7 +7,7 @@ Guitare::Guitare()
 {
 }
 
-Guitare::Guitare(string n, int v) : Instrument(n,v)
+Guitare::Guitare(string n) : Instrument(n)
 {
 }
 
