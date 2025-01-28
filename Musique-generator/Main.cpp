@@ -5,6 +5,7 @@
 #include "Harpe.hpp"
 #include <windows.h>
 
+
 using namespace std;
 
 void Joue(shared_ptr<Instrument> instrument)
@@ -65,9 +66,8 @@ void Joue(shared_ptr<Instrument> instrument)
             cout << "Merci d'avoir jouer." << endl;
             running = false;
         }
-
-        Sleep(10);
     }
+    Sleep(1);
 }
 
 int main()
