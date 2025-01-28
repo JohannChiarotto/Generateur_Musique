@@ -101,15 +101,15 @@ int main()
 
                 if (instrument == 1) //Guitare
                 {
-                    Instrument_definie = make_shared<Guitare>("Guitare", "rapide");
+                    Instrument_definie = make_shared<Guitare>("Guitare", 200);
                 }
                 else if (instrument == 2) //Piano
                 {
-                    Instrument_definie = make_shared<Piano>("Piano", "rapide");
+                    Instrument_definie = make_shared<Piano>("Piano", 200);
                 }
                 else if (instrument == 3) //Harpe
                 {
-                    Instrument_definie = make_shared<Harpe>("Harpe", "rapide");
+                    Instrument_definie = make_shared<Harpe>("Harpe", 200);
                 }
                 else { //Erreur
                     cout << "Il y a une erreur dans le choix de l'instrument" << endl << endl;
