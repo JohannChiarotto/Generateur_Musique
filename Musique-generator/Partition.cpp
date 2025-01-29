@@ -99,29 +99,27 @@ void Partition::Joue(string musique)
     if (musique == "Mario")
     {
         for (int i = 0; i < size(notes_mario); i++) {
-            int duree_ms = static_cast<int>(duree_mario[i] * 1000);
+            int duree_ms = static_cast<int>(duree_mario[i] * 750);
 
-            if (notes_mario[i] != "0")
+            if (notes_mario[i] == "0")
             {
-                Beep(Return_note(notes_mario[i]), duree_ms);
-                cout << notes_star_wars[i] << "   " << duree_ms << endl<< endl;
+                Sleep(duree_ms);
+                continue;
             }
-            else {
-                Sleep(duree_mario[i] * 1000);
-                cout << "sleep 0" << endl << endl;
-            }
-            
+            Beep(Return_note(notes_mario[i]), duree_ms);
         }
     }
     else if (musique == "Star Wars")
     {
-        for (int i = 0; i < size(notes_star_wars); i++) {
-            int duree_ms = static_cast<int>(duree_star_wars[i] * 2000);
+        for (int i = 0; i < size(notes_mario); i++) {
+            int duree_ms = static_cast<int>(duree_star_wars[i] * 750);
 
-            Beep(Return_note(notes_star_wars[i]) + 500, duree_ms);
-            cout << Return_note(notes_star_wars[i]) + 500 << endl;
-            cout << duree_ms << endl;
-
+            if (notes_star_wars[i] == "0")
+            {
+                Sleep(duree_ms);
+                continue;
+            }
+            Beep(Return_note(notes_star_wars[i]), duree_ms);
         }
     }
 }
