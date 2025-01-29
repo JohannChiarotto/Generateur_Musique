@@ -30,7 +30,7 @@ int Partition::Return_note(string note)
     if (note_to_frequency.count(note) > 0) {
         return note_to_frequency.at(note);
     }
-    return -500;
+    return 0;
 }
 
 string notes_star_wars[] = {
@@ -99,11 +99,18 @@ void Partition::Joue(string musique)
     if (musique == "Mario")
     {
         for (int i = 0; i < size(notes_mario); i++) {
-            int duree_ms = static_cast<int>(duree_mario[i] * 2000);
+            int duree_ms = static_cast<int>(duree_mario[i] * 1000);
 
-            Beep(Return_note(notes_mario[i]) + 500, duree_ms);
-            cout << duree_ms << endl;
-
+            if (notes_mario[i] != "0")
+            {
+                Beep(Return_note(notes_mario[i]), duree_ms);
+                cout << notes_star_wars[i] << "   " << duree_ms << endl<< endl;
+            }
+            else {
+                Sleep(duree_mario[i] * 1000);
+                cout << "sleep 0" << endl << endl;
+            }
+            
         }
     }
     else if (musique == "Star Wars")
@@ -112,6 +119,7 @@ void Partition::Joue(string musique)
             int duree_ms = static_cast<int>(duree_star_wars[i] * 2000);
 
             Beep(Return_note(notes_star_wars[i]) + 500, duree_ms);
+            cout << Return_note(notes_star_wars[i]) + 500 << endl;
             cout << duree_ms << endl;
 
         }
