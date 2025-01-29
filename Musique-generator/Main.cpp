@@ -12,11 +12,8 @@ using namespace std;
 void Joue(shared_ptr<Instrument> instrument, int vitesse)
 {
     bool running = true;
-
     cout << "Vous avez choisit l'instrument suivant : " << instrument->get_nom() << endl << endl;
-
     instrument->AfficheArt();
-
     
     while (running)
     {
@@ -143,16 +140,17 @@ int main()
             cout << "Erreur lors de la selection !" << endl;
         }
 
-        cout << "Voulez-vous continuer a utiliser notre generateur de musique intercatif ? O/N" << endl;
+        //Partie qui s'occupe de demmander a l'utilisateur si il veux rejouer ou non
+        cout << "Voulez-vous continuer a utiliser notre generateur de musique intercatif ? y/n" << endl;
         char replay;
         cin >> replay;
 
-        if (replay == 'N')
+        if (replay == 'n')
         {
             running = false;
             cout << endl << "A bientot" << endl;
         }
-        else if (replay == 'O')
+        else if (replay == 'y')
         {
             system("cls");
             continue;
