@@ -3,6 +3,7 @@
 #include "Piano.hpp"
 #include "Guitare.hpp"
 #include "Harpe.hpp"
+#include "Partition.hpp"
 #include <windows.h>
 #include <conio.h>
 
@@ -122,10 +123,15 @@ int main()
             if (fichier == 1)
             {
                 cout << "Voici le morceau de Mario" << endl;
+                shared_ptr<Partition> Instance;
+                Instance->Joue("Mario");
+
             }
             else if (fichier == 2)
             {
                 cout << "Voici le morceau de Star Wars" << endl;
+                shared_ptr<Partition> Instance;
+                Instance->Joue("Star Wars");
             }
             else
             {
