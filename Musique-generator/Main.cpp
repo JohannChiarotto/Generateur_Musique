@@ -9,7 +9,7 @@
 
 using namespace std;
 
-//Fonction qui prend un pointeur instrumenbt et une vitesse d'éxécution
+//Fonction qui prend un pointeur instrument et une vitesse d'éxécution
 //Joue la musique intéractive
 void Joue(shared_ptr<Instrument> instrument, int vitesse)
 {
@@ -19,7 +19,7 @@ void Joue(shared_ptr<Instrument> instrument, int vitesse)
     
     while (running)
     {
-        if (_kbhit()) { // Si une touche est détecter
+        if (_kbhit()) { // Si une touche est détectée
             char touche = _getch();
 
             // Fait la détection des touches
@@ -69,7 +69,7 @@ int main()
         if (choix1 == 1) //Jouer un instrument
         {
             // Choix de la vitesse des notes      1,2 ou 3
-            cout << "A quelle vitesse voulez-vous jouer de la musique ?" << endl << "1. Lentemement " << endl << "2. Normale" << endl << "3. Rapide" << endl;
+            cout << "A quelle vitesse voulez-vous jouer de la musique ?" << endl << "1. Lentemement " << endl << "2. Normal" << endl << "3. Rapide" << endl;
             int vitesse;
             cin >> vitesse;
 
@@ -86,7 +86,7 @@ int main()
             while (ok == false)
             {
                 // Choix de l'instrument       1,2 ou 3
-                cout << endl << "Vous pouvez jouez un instrument parmis les suivants :" << endl;
+                cout << endl << "Choisissez un instrument :" << endl;
                 cout << "1. Guitare" << endl << "2. Piano" << endl << "3. Harpe" << endl;
                 int instrument;
                 cin >> instrument;
@@ -113,7 +113,7 @@ int main()
                 ok = true; // Arrête la boucle quand l'instrument est bon
             }
             
-            // Appel la fonction d'au dessus en denant l'instrument et la vitesse
+            // Appel la fonction d'au dessus en donnant l'instrument et la vitesse sélectioné
             // Vitesse est donc de 200,400 ou 600
             Joue(Instrument_definie, (4-vitesse) * 200);
 

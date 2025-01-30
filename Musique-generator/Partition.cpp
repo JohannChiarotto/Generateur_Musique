@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <vector>
 
 Partition::Partition()
 {
@@ -64,28 +65,24 @@ void Partition::Joue(string musique)
 
     if (musique == "Mario")
     {
-        for (int i = 0; i < size(notes_mario); i++) {
-            int duree_ms = static_cast<int>(duree_mario[i] * 750);
-
-            if (notes_mario[i] == "0")
-            {
-                Sleep(duree_ms);
-                continue;
-            }
-            Beep(Return_note(notes_mario[i]), duree_ms);
-        }
+        Joue_Musique(notes_mario,duree_mario,size(notes_mario));
     }
     else if (musique == "Star Wars")
     {
-        for (int i = 0; i < size(notes_mario); i++) {
-            int duree_ms = static_cast<int>(duree_star_wars[i] * 750);
+        Joue_Musique(notes_star_wars, duree_star_wars, size(notes_star_wars));
+    }
+}
 
-            if (notes_star_wars[i] == "0")
-            {
-                Sleep(duree_ms);
-                continue;
-            }
-            Beep(Return_note(notes_star_wars[i]), duree_ms);
+void Partition::Joue_Musique(string* notes, double duree[], int taille)
+{
+    for (int i = 0; i < taille; i++) {
+        int duree_ms = static_cast<int>(duree[i] * 750);
+
+        if (notes[i] == "0")
+        {
+            Sleep(duree_ms);
+            continue;
         }
+        Beep(Return_note(notes[i]), duree_ms);
     }
 }
